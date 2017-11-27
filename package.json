@@ -1,0 +1,16 @@
+{
+  "name": "admin-theme",
+  "version": "1.0.0",
+  "description": "Creavio Admine Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Malte Frerichs",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.13.0"
+  }
+}
