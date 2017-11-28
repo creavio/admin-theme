@@ -19,7 +19,7 @@ Encore
 		'bootstrap/dist/js/bootstrap.bundle.js',
 		// 'moment',
 		// 'lodash',
-		// 'bootstrap-less/bootstrap/bootstrap.less',
+		// '',
 		'jquery',
 		// 'zone.js',
 		// 'reflect-metadata',

@@ -1,7 +1,14 @@
+@import "../mixins/functions";
+@import "../mixins/sizes";
+
 .cv-main-container {
 	float: left;
 
-	.calc(height, "100% - @{header-height}");
-	.calc(width, "100% - @{}");
+	height: ~"calc(100% - @{header-height})";
+	width: ~"calc(100% - @{navigation-width-large})";
+
 	margin-top: @header-height;
+	margin-left: @navigation-width-large;
+
+	padding: 15px;
 }

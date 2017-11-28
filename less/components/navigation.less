@@ -1,9 +1,15 @@
+@import "../mixins/color";
+@import "../mixins/sizes";
+
 .cv-navigation-container {
+	position: fixed;
+	float: left;
+
+	color: @navigation-text-color;
 	background-color: @navigation-background-color;
 
-	.calc(height, "100% - @{header-height}");
+	height: ~"calc(100% - @{header-height})";
 	width: @navigation-width-large;
-	float: left;
 
 	margin-top: @header-height;
 }
