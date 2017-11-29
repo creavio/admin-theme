@@ -103,20 +103,18 @@
 				display: none;
 				padding: 10px 0;
 
+				&.cv-animated {
+					li {
+						animation: right-slide-in .3s ease-out 1 normal;
+						transform: translate(-100%, 0);
+						animation-fill-mode: forwards;
+						.delayed-animation(10);
+					}
+				}
+
 				li {
-					animation: right-slide-in .3s ease-out 1 normal;
-					transform: translate(-100%, 0);
-					animation-fill-mode: forwards;
-					.delayed-animation(10);
-
-					//&:nth-child(1) {
-					//	animation-delay: 1s;
-					//}
-
 					.cv-navigation-link {
 						height: 30px;
-
-						//animation: right-slide-in .3s ease-out;
 
 						&.active {
 							background-color: darken(@navigation-background-color, 10%);
