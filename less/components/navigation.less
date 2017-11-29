@@ -40,7 +40,6 @@
 				height: 40px;
 				align-items: center;
 
-
 				&:hover {
 					background-color: darken(@navigation-background-color, 10%);
 					text-decoration: none;
@@ -60,6 +59,22 @@
 					font-size: 23px;
 					margin-left: -35px;
 					color: @navigation-icon-color;
+				}
+
+				&.sub-navigation:not(.open)::before {
+					content: "\f0d8";
+					font-family: FontAwesome, sans-serif;
+
+					right: 10px;
+					position: absolute;
+				}
+
+				&.sub-navigation.open::before {
+					content: "\f0d7";
+					font-family: FontAwesome, sans-serif;
+
+					right: 10px;
+					position: absolute;
 				}
 			}
 
