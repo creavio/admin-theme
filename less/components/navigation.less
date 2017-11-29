@@ -1,3 +1,4 @@
+@import "../animations/delayed-animation";
 @import "../mixins/color";
 @import "../mixins/sizes";
 
@@ -33,6 +34,7 @@
 			list-style: none;
 
 			&.active {
+				// TODO auf für die normalen navi punkte
 				.cv-navigation-link.sub-navigation {
 					background-color: @navigation-active-background-color;
 					color: @navigation-active-text-color;
@@ -101,11 +103,24 @@
 				display: none;
 				padding: 10px 0;
 
-				.cv-navigation-link {
-					height: 30px;
+				li {
+					animation: right-slide-in .3s ease-out 1 normal;
+					transform: translate(-100%, 0);
+					animation-fill-mode: forwards;
+					.delayed-animation(10);
 
-					&.active {
-						background-color: darken(@navigation-background-color, 10%);
+					//&:nth-child(1) {
+					//	animation-delay: 1s;
+					//}
+
+					.cv-navigation-link {
+						height: 30px;
+
+						//animation: right-slide-in .3s ease-out;
+
+						&.active {
+							background-color: darken(@navigation-background-color, 10%);
+						}
 					}
 				}
 			}

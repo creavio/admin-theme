@@ -1,0 +1,6 @@
+.delayed-animation(@n, @i: 0) when (@i =< @n) {
+	&:nth-child(@{i}) {
+		animation-delay: (.05s * @i);
+	}
+	.delayed-animation(@n, (@i + 1));
+}
