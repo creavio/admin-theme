@@ -11,12 +11,14 @@ export class Navigation {
 	}
 
 	public subNavigationClicked(event: JQuery.Event) {
-		let element = $(event.target).parent().first();
+		let parentList = $(event.target).parent().first();
 
-		if (element.hasClass('open')) {
-			element.removeClass('open');
+		if (parentList.hasClass('open')) {
+			parentList.removeClass('open');
 		} else {
-			element.addClass('open');
+			// Close all open navigation & open clicked
+			$('.cv-navigation>li.open').removeClass('open');
+			parentList.addClass('open');
 		}
 	}
 }
