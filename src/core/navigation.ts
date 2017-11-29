@@ -34,7 +34,10 @@ export class Navigation {
 
 		let parentSubItem = $(event.target).closest('li');
 
-		parentItem.addClass('active');
+		parentItem
+			.addClass('open')
+			.addClass('active');
+
 		parentSubItem.addClass('active');
 	}
 
@@ -47,6 +50,7 @@ export class Navigation {
 
 	private static clear(): void {
 		$('.cv-navigation>li')
+			.removeClass('open')
 			.removeClass('active');
 
 		$('.cv-sub-navigation-list>li')
