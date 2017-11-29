@@ -1,0 +1,23 @@
+@import "../mixins/color";
+
+html {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+
+	background-color: @background-color;
+	color: @text-color;
+
+	a {
+		color: @text-color;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
