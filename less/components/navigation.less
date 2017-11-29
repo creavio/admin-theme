@@ -8,6 +8,8 @@
 
 	color: @navigation-text-color;
 	background-color: @navigation-background-color;
+	right: 1px solid darken(@header-background-color, 20%);
+	box-shadow: 2px 0 5px darken(@header-background-color, 40%);
 
 	height: ~"calc(100% - @{header-height})";
 	width: @navigation-width-large;
@@ -104,12 +106,8 @@
 				padding: 10px 0;
 
 				&.cv-animated {
-					li {
-						animation: right-slide-in .3s ease-out 1 normal;
-						transform: translate(-100%, 0);
-						animation-fill-mode: forwards;
-						.delayed-animation(10);
-					}
+					animation: top-slide-in 3s ease-out 1 normal;
+					overflow: hidden;
 				}
 
 				li {
