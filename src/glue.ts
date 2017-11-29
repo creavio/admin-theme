@@ -1,3 +1,1 @@
-import './core/globals';
-
-import 'bootstrap'
+import './core/glue';

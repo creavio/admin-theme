@@ -32,6 +32,49 @@
 		li {
 			list-style: none;
 
+			&.active {
+				.cv-navigation-link.sub-navigation {
+					background-color: @navigation-active-background-color;
+					color: @navigation-active-text-color;
+
+					.fa {
+						color: @navigation-active-text-color;
+					}
+				}
+			}
+
+			// If navigation is open
+			&.open {
+				.cv-navigation-link {
+
+					&.sub-navigation::before {
+						content: "\f0d8";
+						font-family: FontAwesome, sans-serif;
+
+						right: 10px;
+						position: absolute;
+					}
+				}
+
+				.cv-navigation-sub {
+					display: block;
+				}
+			}
+
+			// If navigation is closed
+			&:not(.open) {
+				.cv-navigation-link {
+
+					&.sub-navigation::before {
+						content: "\f0d7";
+						font-family: FontAwesome, sans-serif;
+
+						right: 10px;
+						position: absolute;
+					}
+				}
+			}
+
 			.cv-navigation-link {
 				color: @navigation-text-color;
 				display: flex;
@@ -45,42 +88,17 @@
 					text-decoration: none;
 				}
 
-				&.active {
-					background-color: @navigation-active-background-color;
-					color: @navigation-active-text-color;
-
-					.fa {
-						color: @navigation-active-text-color;
-					}
-				}
-
 				.fa {
 					position: absolute;
 					font-size: 23px;
 					margin-left: -35px;
 					color: @navigation-icon-color;
 				}
-
-				&.sub-navigation:not(.open)::before {
-					content: "\f0d8";
-					font-family: FontAwesome, sans-serif;
-
-					right: 10px;
-					position: absolute;
-				}
-
-				&.sub-navigation.open::before {
-					content: "\f0d7";
-					font-family: FontAwesome, sans-serif;
-
-					right: 10px;
-					position: absolute;
-				}
 			}
 
 			.cv-navigation-sub {
 				background-color: darken(@navigation-background-color, 5%);
-
+				display: none;
 				padding: 10px 0;
 
 				.cv-navigation-link {
