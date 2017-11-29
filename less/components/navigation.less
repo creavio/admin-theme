@@ -36,8 +36,7 @@
 			list-style: none;
 
 			&.active {
-				// TODO auf für die normalen navi punkte
-				.cv-navigation-link.sub-navigation {
+				.cv-navigation-link {
 					background-color: @navigation-active-background-color;
 					color: @navigation-active-text-color;
 
@@ -48,10 +47,10 @@
 			}
 
 			// If navigation is open
-			&.open {
+			&.open.cv-sub-navigation {
 				.cv-navigation-link {
 
-					&.sub-navigation::before {
+					&::before {
 						content: "\f0d8";
 						font-family: FontAwesome, sans-serif;
 
@@ -60,16 +59,16 @@
 					}
 				}
 
-				.cv-navigation-sub {
+				.cv-sub-navigation-list {
 					display: block;
 				}
 			}
 
 			// If navigation is closed
-			&:not(.open) {
+			&.cv-sub-navigation:not(.open) {
 				.cv-navigation-link {
 
-					&.sub-navigation::before {
+					&::before {
 						content: "\f0d7";
 						font-family: FontAwesome, sans-serif;
 
@@ -88,7 +87,7 @@
 				align-items: center;
 
 				&:hover {
-					background-color: darken(@navigation-background-color, 10%);
+					background-color: darken(@navigation-background-color, 10%) !important;
 					text-decoration: none;
 				}
 
@@ -100,7 +99,7 @@
 				}
 			}
 
-			.cv-navigation-sub {
+			.cv-sub-navigation-list {
 				background-color: darken(@navigation-background-color, 5%);
 				display: none;
 				padding: 10px 0;
@@ -111,11 +110,21 @@
 				}
 
 				li {
+
+					&.active {
+						.cv-navigation-link {
+							background-color: darken(@navigation-background-color, 10%);
+							color: #fff;
+						}
+					}
+
 					.cv-navigation-link {
 						height: 30px;
+						background-color: darken(@navigation-background-color, 5%);
+						color: @navigation-text-color;
 
-						&.active {
-							background-color: darken(@navigation-background-color, 10%);
+						&::before {
+							content: '' !important;
 						}
 					}
 				}
