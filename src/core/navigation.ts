@@ -13,8 +13,10 @@ export class cvNavigation {
 	public static init(): void {
 		$('.cv-sub-navigation>.cv-navigation-link').on('mouseenter', (event: JQuery.Event) => {
 			if ($('body').hasClass('minified')) {
+				this.openItem && this.openItem.closest('li').removeClass('hovered');
+
 				this.openItem = $(event.target);
-				this.openItem.closest('li').addClass('hovered');
+				setTimeout(() => $(event.target).closest('li').addClass('hovered'), 100);
 			}
 		});
 
@@ -43,6 +45,7 @@ export class cvNavigation {
 		$('.cv-navigation>li:not(.cv-sub-navigation)>.cv-navigation-link')
 			.on('click', (event) => this.mainLinkClicked(event));
 	}
+
 
 	public static subNavigationClicked(event: JQuery.Event): void {
 		let parentItem = $(event.target).closest('li');
