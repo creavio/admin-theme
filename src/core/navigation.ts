@@ -88,7 +88,16 @@ export class cvNavigation {
 		} else {
 			body.addClass('minified');
 		}
+	}
 
+	public static toggleMobileNav(): void {
+		let body = $('body');
+
+		if (body.hasClass('mobile-show-nav')) {
+			body.removeClass('mobile-show-nav');
+		} else {
+			body.addClass('mobile-show-nav');
+		}
 	}
 
 	private static clear(): void {

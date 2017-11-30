@@ -6,6 +6,10 @@ $(
 
 		$('.cv-navigation-minifier').on('click', () => {
 			cvNavigation.toggleMinified();
-		})
+		});
+
+		$('.cv-header-menu-icon').on('click', () => {
+			cvNavigation.toggleMobileNav();
+		});
 	}
 );

@@ -1,5 +1,7 @@
 @import "../mixins/color";
 @import "../mixins/sizes";
+@import "~bootstrap/scss/bootstrap-grid";
+
 
 .cv-navigation-container {
 	position: fixed;
@@ -13,6 +15,14 @@
 	height: calc(100% - #{$header-height});
 	width: $navigation-width-large;
 	transition: all .3s ease-in-out;
+
+	@include media-breakpoint-down(md) {
+		margin-left: -100%;
+	}
+
+	.mobile-show-nav & {
+		margin-left: 0 !important;
+	}
 
 	margin-top: $header-height;
 
@@ -213,6 +223,10 @@
 		cursor: pointer;
 
 		transition: all .2s ease-in-out;
+
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 
 
 		&:hover {

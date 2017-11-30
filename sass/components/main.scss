@@ -1,4 +1,5 @@
 @import "../mixins/sizes";
+@import "~bootstrap/scss/bootstrap-grid";
 
 .cv-main-container {
 	float: left;
@@ -8,6 +9,10 @@
 
 	margin-top: $header-height;
 	margin-left: $navigation-width-large;
+
+	@include media-breakpoint-down(md) {
+		margin-left: 0;
+	}
 
 	transition: all .3s ease-in-out;
 
