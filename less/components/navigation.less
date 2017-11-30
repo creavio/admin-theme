@@ -40,6 +40,10 @@
 					background-color: @navigation-active-background-color;
 					color: @navigation-active-text-color;
 
+					&:hover {
+						background-color: @navigation-active-background-color;
+					}
+
 					.fa {
 						color: @navigation-active-text-color;
 					}
@@ -86,8 +90,12 @@
 				height: 40px;
 				align-items: center;
 
+				&:active {
+					background-color: @navigation-active-background-color;
+				}
+
 				&:hover {
-					background-color: darken(@navigation-background-color, 10%) !important;
+					background-color: darken(@navigation-background-color, 10%);
 					text-decoration: none;
 				}
 
