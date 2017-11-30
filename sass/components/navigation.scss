@@ -87,6 +87,8 @@
 						right: 10px;
 						position: absolute;
 
+						animation: spin-up .6s ease-in-out;
+
 						.minified & {
 							content: '';
 						}
@@ -122,6 +124,8 @@
 
 						right: 10px;
 						position: absolute;
+
+						animation: spin-down .6s;
 
 						.minified & {
 							content: '';
