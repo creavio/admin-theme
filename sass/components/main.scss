@@ -10,8 +10,9 @@
 	margin-top: $header-height;
 	margin-left: $navigation-width-large;
 
-	@include media-breakpoint-down(md) {
-		margin-left: 0;
+	@include media-breakpoint-down(sm) {
+		margin-left: 0 !important;
+		width: 100% !important;
 	}
 
 	transition: all .3s ease-in-out;

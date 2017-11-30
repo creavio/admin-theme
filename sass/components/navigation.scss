@@ -16,7 +16,7 @@
 	width: $navigation-width-large;
 	transition: all .3s ease-in-out;
 
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(sm) {
 		margin-left: -100%;
 	}
 
@@ -224,7 +224,7 @@
 
 		transition: all .2s ease-in-out;
 
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(sm) {
 			display: none;
 		}
 

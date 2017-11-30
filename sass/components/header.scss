@@ -1,5 +1,7 @@
 @import "../mixins/color";
 @import "../mixins/sizes";
+@import "~bootstrap/scss/bootstrap-grid";
+
 
 .cv-header-container {
 	position: fixed;
@@ -19,6 +21,10 @@
 		font-size: 15px;
 		transition: all .3s ease-in-out;
 		color: $text-color;
+
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
 
 		&:hover {
 			transform: scale(1.2);
