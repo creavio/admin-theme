@@ -10,7 +10,7 @@
 	right: 1px solid darken($header-background-color, 20%);
 	box-shadow: 2px 0 5px darken($header-background-color, 40%);
 
-	height: calc(100% - #{header-height});
+	height: calc(100% - #{$header-height});
 	width: $navigation-width-large;
 
 	margin-top: $header-height;
