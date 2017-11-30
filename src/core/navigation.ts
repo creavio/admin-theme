@@ -7,7 +7,7 @@ export class cvNavigation {
 
 	public static closeSubNavigation = _.debounce(() => {
 		cvNavigation.closeOkay && cvNavigation.openItem.closest('li').removeClass('hovered');
-	}, 100);
+	}, 50);
 
 
 	public static init(): void {

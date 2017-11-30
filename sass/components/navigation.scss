@@ -163,11 +163,12 @@
 
 				.minified & {
 					position: absolute;
-					left: calc(100% + 1px);
+					left: 100%;
 					width: 200px;
 					margin-top: -40px;
 					margin-left: 0;
 
+					border: 1px solid lighten($navigation-background-color, 20%);
 					box-shadow: 2px 2px 3px darken($header-background-color, 50%);
 				}
 
