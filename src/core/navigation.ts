@@ -1,8 +1,39 @@
 import 'jquery';
+import * as _ from 'lodash';
 
 export class cvNavigation {
+	public static openItem: any;
+	public static closeOkay: boolean = true;
+
+	public static closeSubNavigation = _.debounce(() => {
+		cvNavigation.closeOkay && cvNavigation.openItem.closest('li').removeClass('hovered');
+	}, 100);
+
 
 	public static init(): void {
+		$('.cv-sub-navigation>.cv-navigation-link').on('mouseenter', (event: JQuery.Event) => {
+			if ($('body').hasClass('minified')) {
+				this.openItem = $(event.target);
+				this.openItem.closest('li').addClass('hovered');
+			}
+		});
+
+		$('.cv-sub-navigation>.cv-navigation-link').on('mouseleave', (event: JQuery.Event) => {
+			if ($('body').hasClass('minified')) {
+				this.closeSubNavigation();
+			}
+		});
+
+		$('.cv-sub-navigation>.cv-sub-navigation-list').on('mouseenter', (event: JQuery.Event) => {
+			this.closeOkay = false;
+		});
+
+		$('.cv-sub-navigation>.cv-sub-navigation-list').on('mouseleave', (event: JQuery.Event) => {
+			this.closeOkay = true;
+			this.closeSubNavigation();
+		});
+
+
 		$('.cv-sub-navigation>.cv-navigation-link')
 			.on('click', (event) => this.subNavigationClicked(event));
 
@@ -46,6 +77,18 @@ export class cvNavigation {
 		let parentItem = $(event.target).closest('li');
 
 		parentItem.addClass('active');
+	}
+
+	public static toggleMinified(): void {
+		let body = $('body');
+
+		if (body.hasClass('minified')) {
+			body.removeClass('minified');
+			$('.cv-navigation').find('.hovered').removeClass('hovered');
+		} else {
+			body.addClass('minified');
+		}
+
 	}
 
 	private static clear(): void {

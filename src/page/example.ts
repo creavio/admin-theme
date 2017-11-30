@@ -1,9 +1,11 @@
 import {cvNavigation} from "../core/navigation";
-import {cvResponsive} from "../core/responsive";
 
 $(
 	() => {
 		cvNavigation.init();
-		cvResponsive.init();
+
+		$('.cv-header-menu-icon').on('click', () => {
+			cvNavigation.toggleMinified();
+		})
 	}
 );
