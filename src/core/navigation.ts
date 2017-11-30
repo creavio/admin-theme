@@ -1,6 +1,6 @@
 import 'jquery';
 
-export class Navigation {
+export class cvNavigation {
 
 	public static init(): void {
 		$('.cv-sub-navigation>.cv-navigation-link')

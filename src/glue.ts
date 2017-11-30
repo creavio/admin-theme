@@ -1,1 +1,1 @@
-import './core/glue';
+import "./page/example";
