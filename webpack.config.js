@@ -8,7 +8,7 @@ Encore
 	.cleanupOutputBeforeBuild()
 
 	.addEntry('app', './src/glue.ts')
-	.addStyleEntry('style', './less/glue.scss')
+	.addStyleEntry('style', './sass/glue.scss')
 
 	.autoProvidejQuery()
 
