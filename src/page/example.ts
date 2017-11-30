@@ -4,7 +4,7 @@ $(
 	() => {
 		cvNavigation.init();
 
-		$('.cv-header-menu-icon').on('click', () => {
+		$('.cv-navigation-minifier').on('click', () => {
 			cvNavigation.toggleMinified();
 		})
 	}

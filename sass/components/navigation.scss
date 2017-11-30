@@ -200,4 +200,33 @@
 
 		}
 	}
+
+	.cv-navigation-minifier {
+
+		background-color: darken($navigation-background-color, 10%);
+		position: absolute;
+		right: 0;
+		padding: 5px 15px;
+
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		cursor: pointer;
+
+		transition: all .2s ease-in-out;
+
+
+		&:hover {
+			background-color: darken($navigation-active-background-color, 10%);
+			padding: 5px 20px;
+		}
+
+		&::before {
+			content: "\f100";
+			font-family: FontAwesome, sans-serif;
+
+			.minified & {
+				content: "\f101";
+			}
+		}
+	}
 }
