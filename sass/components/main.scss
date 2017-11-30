@@ -9,5 +9,12 @@
 	margin-top: $header-height;
 	margin-left: $navigation-width-large;
 
+	transition: all .3s ease-in-out;
+
+	.minified & {
+		width: calc(100% - #{$navigation-width-minified});
+		margin-left: $navigation-width-minified;
+	}
+
 	padding: 15px;
 }
