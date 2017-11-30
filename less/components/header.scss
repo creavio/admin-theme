@@ -3,22 +3,22 @@
 
 .cv-header-container {
 	position: fixed;
-	height: @header-height;
+	height: $header-height;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	padding: 15px;
 
-	background-color: @header-background-color;
-	border-bottom: 1px solid darken(@header-background-color, 20%);
-	box-shadow: 0 2px 5px darken(@header-background-color, 30%);
+	background-color: $header-background-color;
+	border-bottom: 1px solid darken($header-background-color, 20%);
+	box-shadow: 0 2px 5px darken($header-background-color, 30%);
 
 	top: 0;
 
 	.cv-header-menu-icon {
 		font-size: 15px;
 		transition: all .3s ease-in-out;
-		color: @text-color;
+		color: $text-color;
 
 		&:hover {
 			transform: scale(1.2);
@@ -26,7 +26,7 @@
 	}
 
 	.cv-header-name {
-		color: @text-color;
+		color: $text-color;
 
 		font-size: 18px;
 		font-weight: 300;

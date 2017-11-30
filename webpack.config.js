@@ -8,12 +8,13 @@ Encore
 	.cleanupOutputBeforeBuild()
 
 	.addEntry('app', './src/glue.ts')
-	.addStyleEntry('style', './less/glue.less')
+	.addStyleEntry('style', './less/glue.scss')
 
 	.autoProvidejQuery()
 
 	.enableTypeScriptLoader()
-	.enableLessLoader()
+	// .enableLessLoader()
+	.enableSassLoader()
 
 	.createSharedEntry('vendor', [
 		'bootstrap/dist/js/bootstrap.bundle.js',

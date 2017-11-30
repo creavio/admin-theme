@@ -10,11 +10,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-size: 13px;
 
-	background-color: @background-color;
-	color: @text-color;
+	background-color: $background-color;
+	color: $text-color;
 
 	a {
-		color: @text-color;
+		color: $text-color;
 
 		&:hover {
 			text-decoration: none;

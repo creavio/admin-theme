@@ -1,4 +1,3 @@
-@import "../animations/delayed-animation";
 @import "../mixins/color";
 @import "../mixins/sizes";
 
@@ -6,19 +5,19 @@
 	position: fixed;
 	float: left;
 
-	color: @navigation-text-color;
-	background-color: @navigation-background-color;
-	right: 1px solid darken(@header-background-color, 20%);
-	box-shadow: 2px 0 5px darken(@header-background-color, 40%);
+	color: $navigation-text-color;
+	background-color: $navigation-background-color;
+	right: 1px solid darken($header-background-color, 20%);
+	box-shadow: 2px 0 5px darken($header-background-color, 40%);
 
-	height: ~"calc(100% - @{header-height})";
-	width: @navigation-width-large;
+	height: calc(100% - #{header-height});
+	width: $navigation-width-large;
 
-	margin-top: @header-height;
+	margin-top: $header-height;
 
 	.cv-navigation-user-container {
 		height: 100px;
-		background-color: darken(@navigation-background-color, 5%);
+		background-color: darken($navigation-background-color, 5%);
 
 		display: flex;
 		// Center vertical
@@ -37,15 +36,15 @@
 
 			&.active {
 				.cv-navigation-link {
-					background-color: @navigation-active-background-color;
-					color: @navigation-active-text-color;
+					background-color: $navigation-active-background-color;
+					color: $navigation-active-text-color;
 
 					&:hover {
-						background-color: @navigation-active-background-color;
+						background-color: $navigation-active-background-color;
 					}
 
 					.fa {
-						color: @navigation-active-text-color;
+						color: $navigation-active-text-color;
 					}
 				}
 			}
@@ -83,7 +82,7 @@
 			}
 
 			.cv-navigation-link {
-				color: @navigation-text-color;
+				color: $navigation-text-color;
 				display: flex;
 				padding-left: 60px;
 				transition: all .2s;
@@ -91,11 +90,11 @@
 				align-items: center;
 
 				&:active {
-					background-color: @navigation-active-background-color;
+					background-color: $navigation-active-background-color;
 				}
 
 				&:hover {
-					background-color: darken(@navigation-background-color, 10%);
+					background-color: darken($navigation-background-color, 10%);
 					text-decoration: none;
 				}
 
@@ -103,12 +102,12 @@
 					position: absolute;
 					font-size: 23px;
 					margin-left: -35px;
-					color: @navigation-icon-color;
+					color: $navigation-icon-color;
 				}
 			}
 
 			.cv-sub-navigation-list {
-				background-color: darken(@navigation-background-color, 5%);
+				background-color: darken($navigation-background-color, 5%);
 				display: none;
 				padding: 10px 0;
 
@@ -121,18 +120,18 @@
 
 					&.active {
 						.cv-navigation-link {
-							background-color: darken(@navigation-background-color, 10%);
+							background-color: darken($navigation-background-color, 10%);
 							color: #fff;
 						}
 					}
 
 					.cv-navigation-link {
 						height: 30px;
-						background-color: darken(@navigation-background-color, 5%);
-						color: @navigation-text-color;
+						background-color: darken($navigation-background-color, 5%);
+						color: $navigation-text-color;
 
 						&:hover {
-							background-color: darken(@navigation-background-color, 10%);
+							background-color: darken($navigation-background-color, 10%);
 							text-decoration: none;
 						}
 
