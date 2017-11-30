@@ -169,6 +169,7 @@
 				background-color: darken($navigation-background-color, 5%);
 				display: none;
 				padding: 10px 0;
+				transition: all 1s;
 
 				&.cv-animated {
 					animation: top-slide-in 3s ease-out 1 normal;
