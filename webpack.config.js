@@ -20,7 +20,7 @@ Encore
 		'bootstrap/dist/js/bootstrap.bundle.js',
 		// 'moment',
 		// 'lodash',
-		// '',
+		// 'font-awesome',
 		'jquery',
 		// 'zone.js',
 		// 'reflect-metadata',
@@ -35,8 +35,8 @@ Encore
 	// 	root('./src') // location of your src
 	// ))
 
-	.enableSourceMaps(!Encore.isProduction())
-	.enableVersioning(Encore.isProduction())
+	// .enableSourceMaps(!Encore.isProduction())
+	// .enableVersioning(Encore.isProduction())
 ;
 
 function root(__path) {
