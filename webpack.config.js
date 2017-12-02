@@ -18,7 +18,6 @@ Encore
 
 	.createSharedEntry('vendor', [
 		'bootstrap/dist/js/bootstrap.bundle.js',
-		// 'moment',
 		// 'lodash',
 		// 'font-awesome',
 		'jquery',
@@ -27,6 +26,7 @@ Encore
 	])
 
 	.addLoader({ test: /\.html/, loader: 'html-loader' })
+	.addLoader({ test: require.resolve("pace-progress"), loader: "imports?define=>false" })
 	// .addLoader({ test:  /component\.less/, loader: 'raw-loader!less-loader' })
 	// .addLoader({ test: /\.twig/, loader: 'twig-loader' })
 
