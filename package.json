@@ -1,6 +1,6 @@
 {
   "name": "admin-theme",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "Creavio Admine Theme",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "prod": "./node_modules/.bin/encore production",
     "watch": "./node_modules/.bin/encore dev --watch",
     "server": "./node_modules/.bin/encore dev-server --port 9000"
+    "build": "tsc"
   },
   "author": "Malte Frerichs",
   "license": "ISC",

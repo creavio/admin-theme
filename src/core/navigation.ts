@@ -6,9 +6,8 @@ export class cvNavigation {
 	public static closeOkay: boolean = true;
 
 	public static closeSubNavigation = _.debounce(() => {
-		cvNavigation.closeOkay && cvNavigation.openItem.closest('li').removeClass('hovered');
+		cvNavigation.closeOkay && cvNavigation.openItem && cvNavigation.openItem .closest('li').removeClass('hovered');
 	}, 50);
-
 
 	public static init(): void {
 		$('.cv-sub-navigation>.cv-navigation-link').on('mouseenter', (event: JQuery.Event) => {
@@ -44,6 +43,16 @@ export class cvNavigation {
 
 		$('.cv-navigation>li:not(.cv-sub-navigation)>.cv-navigation-link')
 			.on('click', (event) => this.mainLinkClicked(event));
+
+		// Menu Minifier
+		$('.cv-navigation-minifier').on('click', () => {
+			cvNavigation.toggleMinified();
+		});
+
+		//
+		$('.cv-header-menu-icon').on('click', () => {
+			cvNavigation.toggleMobileNav();
+		});
 	}
 
 

@@ -1,4 +1,6 @@
 webpack.config.js
 tsconfig.json
-/dist
 /examples/test.html
+/.idea
+/src/glue.ts
+/dist
