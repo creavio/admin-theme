@@ -36,7 +36,18 @@
 
 		font-size: 18px;
 		font-weight: 300;
+		transition: all .2s ease-in-out;
 
-		margin-left: 15px;
+		@include media-breakpoint-down(sm) {
+			margin-left: 10px;
+		}
+
+		img {
+			height: $header-height - 10;
+		}
+
+		&:hover {
+			margin-left: 5px;
+		}
 	}
 }
