@@ -15,7 +15,7 @@
 		width: 100% !important;
 	}
 
-	transition: all .3s ease-in-out;
+	transition: margin-left .3s ease-in-out, width .3s ease-in-out;
 
 	.minified & {
 		width: calc(100% - #{$navigation-width-minified});

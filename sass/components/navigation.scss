@@ -14,7 +14,7 @@
 
 	height: calc(100% - #{$header-height});
 	width: $navigation-width-large;
-	transition: all .3s ease-in-out;
+	transition: width .3s ease-in-out;
 
 	z-index: 999;
 
@@ -163,7 +163,7 @@
 				color: $navigation-text-color;
 				display: flex;
 				padding-left: 60px;
-				transition: all .2s;
+				transition: padding-left .2s, background-color .2s;
 				height: 40px;
 				align-items: center;
 
@@ -194,7 +194,6 @@
 				background-color: darken($navigation-background-color, 5%);
 				display: none;
 				padding: 10px 0;
-				transition: all 1s;
 
 				&.cv-animated {
 					animation: top-slide-in 3s ease-out 1 normal;
@@ -252,7 +251,7 @@
 		border-bottom-left-radius: 10px;
 		cursor: pointer;
 
-		transition: all .2s ease-in-out;
+		transition: padding .2s ease-in-out, background-color .2s ease-in-out;
 
 		@include media-breakpoint-down(sm) {
 			display: none;
