@@ -7,15 +7,23 @@
 	position: fixed;
 	height: $header-height;
 	width: 100%;
-	display: flex;
-	align-items: center;
 	padding: 15px;
 
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
 	background-color: $header-background-color;
+	color: $text-color !important;
 	border-bottom: 1px solid darken($header-background-color, 20%);
 	box-shadow: 0 2px 5px darken($header-background-color, 30%);
 
 	top: 0;
+
+	.cv-header-right-side, .cv-header-left-side {
+		display: flex;
+		align-items: center;
+	}
 
 	.cv-header-menu-icon {
 		font-size: 15px;
@@ -50,4 +58,52 @@
 			margin-left: 5px;
 		}
 	}
+
+	.cv-header-right-side {
+
+		.cv-header-inbox {
+			font-size: 18px;
+			margin: 0 20px;
+			transition: opacity .2s;
+
+			.badge {
+				position: absolute;
+			}
+
+			&:hover {
+				opacity: 0.6;
+				cursor: pointer;
+				color: $text-color;
+			}
+		}
+
+		.cv-header-user-container {
+			float: right;
+			transition: opacity .2s;
+
+			.cv-user-image {
+				width: 30px;
+
+				background-color: #fff;
+
+				border-radius: 20px;
+				display: inline-block;
+
+				margin-left: 5px;
+
+				img {
+					border-radius: 20px;
+					max-width: 100%;
+					max-height: 100%;
+				}
+
+			}
+
+			&:hover {
+				opacity: 0.6;
+				cursor: pointer;
+			}
+		}
+	}
+
 }
