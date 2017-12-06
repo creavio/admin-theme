@@ -66,14 +66,23 @@
 			margin: 0 20px;
 			transition: opacity .2s;
 
-			.badge {
-				position: absolute;
-			}
-
 			&:hover {
 				opacity: 0.6;
 				cursor: pointer;
 				color: $text-color;
+			}
+		}
+
+		.cv-header-inbox {
+			position: relative;
+			.badge {
+				position: absolute;
+				width: 15px;
+				height: 15px;
+				font-size: 12px;
+				right: -8px;
+				display: flex;
+				justify-content: center;
 			}
 		}
 
