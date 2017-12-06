@@ -8,10 +8,19 @@ export class cvAdminTheme {
 		cvHeader.init();
 
 		this.initTooltips();
+		this.removePreLoad();
 	}
 
 	private static initTooltips(): void {
 		($('[data-toggle="tooltip"]') as any).tooltip();
+	}
+
+	private static removePreLoad(): void {
+		let body = $('body');
+
+		if (body.hasClass('cv-preload')) {
+			body.removeClass('cv-preload');
+		}
 	}
 
 }
