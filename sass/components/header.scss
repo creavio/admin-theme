@@ -39,19 +39,31 @@
 		}
 	}
 
-	.cv-header-name {
+	.cv-header-name-container {
 		color: $text-color;
 
 		font-size: 18px;
 		font-weight: 300;
-		transition: all .2s ease-in-out;
-
-		@include media-breakpoint-down(sm) {
-			margin-left: 10px;
-		}
+		transition: margin-left .2s ease-in-out;
 
 		img {
 			height: $header-height - 10;
+		}
+
+		@include media-breakpoint-down(md) {
+			img {
+				height: $header-height - 15;
+			}
+
+			.cv-header-name {
+				display: none;
+			}
+
+			margin-left: 10px;
+
+			&:hover {
+				margin-left: 10px !important;
+			}
 		}
 
 		&:hover {
@@ -93,6 +105,12 @@
 		.cv-header-user-container {
 			float: right;
 			transition: opacity .2s;
+
+			.cv-header-user {
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			}
 
 			.cv-user-image {
 				width: 30px;
