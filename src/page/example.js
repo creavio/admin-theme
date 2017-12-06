@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var navigation_1 = require("../core/navigation");
+var admin_theme_1 = require("../core/admin-theme");
 $(function () {
-    navigation_1.cvNavigation.init();
+    admin_theme_1.cvAdminTheme.init();
 });
 //# sourceMappingURL=example.js.map

@@ -1,13 +1,13 @@
 {
   "name": "admin-theme",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Creavio Admine Theme",
   "main": "index.js",
   "scripts": {
     "dev": "./node_modules/.bin/encore dev",
     "prod": "./node_modules/.bin/encore production",
     "watch": "./node_modules/.bin/encore dev --watch",
-    "server": "./node_modules/.bin/encore dev-server --port 9000",
+    "server": "./node_modules/.bin/encore dev-server --port 9001",
     "build": "tsc"
   },
   "author": "Malte Frerichs",

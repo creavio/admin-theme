@@ -1,7 +1,7 @@
-import {cvNavigation} from "../core/navigation";
+import {cvAdminTheme} from "../core/admin-theme";
 
 $(
 	() => {
-		cvNavigation.init();
+		cvAdminTheme.init();
 	}
 );
