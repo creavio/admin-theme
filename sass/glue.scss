@@ -1,14 +1,18 @@
 @import "./animations/blind-top-in";
+@import "./animations/fade-in";
 @import "./animations/right-slide-in";
+@import "./animations/slide-down";
 @import "./animations/spin-down";
 @import "./animations/spin-up";
 @import "./animations/top-slide-in";
 
+@import './components/button';
 @import './components/global';
 @import './components/header';
 @import './components/main';
 @import './components/navigation';
 @import './components/panel';
+@import './components/search';
 
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~roboto-fontface/css/roboto/roboto-fontface.css";

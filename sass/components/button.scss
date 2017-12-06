@@ -1,0 +1,25 @@
+@import "../mixins/color";
+
+
+.cv-admin-theme {
+	.btn {
+		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 13px;
+
+		transition: box-shadow .4s;
+		border: 0;
+
+		&:focus, &:active, &:hover {
+			box-shadow: none !important;
+		}
+
+		&:active {
+			box-shadow: 3px 3px 10px #737373 !important;
+		}
+
+		&.btn-primary {
+			background-color: $navigation-active-background-color !important;
+		}
+	}
+}
