@@ -14,7 +14,7 @@
 
 	height: calc(100% - #{$header-height});
 	width: $navigation-width-large;
-	transition: width .3s ease-in-out;
+	transition: width .3s ease-in-out, margin-left .3s ease-out;
 
 	z-index: 999;
 

@@ -50,7 +50,7 @@
 			height: $header-height - 10;
 		}
 
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(sm) {
 			img {
 				height: $header-height - 15;
 			}
