@@ -7,7 +7,7 @@
 
 	visibility: visible;
 	opacity: 1;
-	transition: visibility 0s, opacity .2s;
+	transition: visibility .2s, opacity .2s;
 
 	&.cv-hide {
 		visibility: hidden;

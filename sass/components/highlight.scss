@@ -1,0 +1,6 @@
+@import "../mixins/color";
+
+.cv-highlight-dark {
+	font-weight: bold;
+	color: darken($navigation-active-background-color, 20%);
+}

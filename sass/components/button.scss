@@ -11,11 +11,16 @@
 		border: 0;
 
 		&:focus, &:active, &:hover {
-			box-shadow: none !important;
+			box-shadow: none;
 		}
 
 		&:active {
 			box-shadow: 3px 3px 10px #737373 !important;
+		}
+
+		&:hover {
+			box-shadow: 0 0 5px #737373;
+
 		}
 
 		&.btn-primary {
