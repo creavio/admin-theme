@@ -1,0 +1,39 @@
+@import "../mixins/color";
+@import "../mixins/sizes";
+
+.cv-big-alert-container {
+	z-index: 9999;
+	position: absolute;
+
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s, opacity .3s;
+
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background-color: rgba(0, 0, 0, 0.3);
+
+	&.cv-hide {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.cv-big-alert {
+		position: fixed;
+		background-color: rgba(255, 255, 255, 0.8);
+
+		border-top: 1px solid lighten($navigation-background-color, 20%);
+		border-bottom: 1px solid lighten($navigation-background-color, 20%);
+
+		height: $big-alert-height;
+		color: $navigation-active-background-color;
+		top: 30%;
+		width: 100%;
+
+		display: flex;
+		justify-content: center;
+	}
+}

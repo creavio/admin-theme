@@ -1,11 +1,13 @@
 import * as $ from 'jquery';
 import {cvNavigation} from "./navigation";
 import {cvHeader} from "./header";
+import {cvBigAlert} from "./big-alert";
 
 export class cvAdminTheme {
 	public static init(): void {
 		cvNavigation.init();
 		cvHeader.init();
+		cvBigAlert.init();
 
 		this.initTooltips();
 		this.removePreLoad();
