@@ -19,6 +19,7 @@
 	box-shadow: 0 2px 5px darken($header-background-color, 30%);
 
 	top: 0;
+	z-index: 1000;
 
 	.cv-header-right-side, .cv-header-left-side {
 		display: flex;
@@ -89,18 +90,58 @@
 			margin: 0 0 0 20px;
 		}
 
-		.cv-header-inbox {
-			position: relative;
-			.badge {
+		.cv-header-inbox-container {
+
+			.cv-header-inbox {
+				position: relative;
+				.badge {
+					position: absolute;
+					width: 15px;
+					height: 15px;
+					font-size: 12px;
+					right: -8px;
+					display: flex;
+					justify-content: center;
+				}
+			}
+
+			.cv-inbox-container {
 				position: absolute;
-				width: 15px;
-				height: 15px;
-				font-size: 12px;
-				right: -8px;
-				display: flex;
-				justify-content: center;
+
+				.cv-inbox {
+					position: relative;
+					background-color: #fff;
+					width: $header-inbox-width;
+					margin-left: $header-inbox-width / 2 * -1 + 28px;
+					margin-top: 12px;
+
+					border: 1px solid lighten($navigation-background-color, 20%);
+					border-top: 0;
+
+					box-shadow: 2px 2px 5px #737373;
+
+					height: 300px;
+
+					//&:after {
+					//	content: '';
+					//	position: absolute;
+					//	top: 0;
+					//	left: 50%;
+					//	width: 0;
+					//	height: 0;
+					//	border: 8px solid transparent;
+					//	border-bottom-color: #f90;
+					//	border-top: 0;
+					//	margin-left: -8px;
+					//	margin-top: -8px;
+					//}
+
+				}
+
+
 			}
 		}
+
 
 		.cv-header-user-container {
 			float: right;
