@@ -9,6 +9,7 @@ var cvHeader = (function () {
         $('.cv-header-search').on('click', function (event) { return _this.toggleSearch(event); });
         $('.cv-search-container').on('click', function (event) { return _this.toggleSearch(event); });
         $('.cv-logout-button').on('click', function (event) { return _this.showLogout(event); });
+        $('.cv-header-inbox').on('click', function (event) { return _this.toggleInbox(event); });
     };
     cvHeader.toggleSearch = function (event) {
         var searchContainer = $('.cv-search-container');
@@ -24,6 +25,15 @@ var cvHeader = (function () {
         var logoutContainer = $('.cv-logout');
         if (logoutContainer.hasClass('cv-hide')) {
             logoutContainer.removeClass('cv-hide');
+        }
+    };
+    cvHeader.toggleInbox = function (event) {
+        var inboxContainer = $('.cv-inbox-container');
+        if (inboxContainer.hasClass('cv-hide')) {
+            inboxContainer.removeClass('cv-hide');
+        }
+        else if (!$(event.target).hasClass('cv-inbox-container')) {
+            inboxContainer.addClass('cv-hide');
         }
     };
     return cvHeader;

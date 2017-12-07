@@ -7,6 +7,7 @@ export class cvHeader {
 		$('.cv-search-container').on('click', (event: JQuery.Event) => this.toggleSearch(event));
 
 		$('.cv-logout-button').on('click', (event: JQuery.Event) => this.showLogout(event));
+		$('.cv-header-inbox').on('click', (event: JQuery.Event) => this.toggleInbox(event));
 	}
 
 	private static toggleSearch(event: JQuery.Event): void {
@@ -25,6 +26,16 @@ export class cvHeader {
 
 		if (logoutContainer.hasClass('cv-hide')) {
 			logoutContainer.removeClass('cv-hide');
+		}
+	}
+
+	private static toggleInbox(event: JQuery.Event): void {
+		let inboxContainer = $('.cv-inbox-container');
+
+		if (inboxContainer.hasClass('cv-hide')) {
+			inboxContainer.removeClass('cv-hide');
+		} else if(!$(event.target).hasClass('cv-inbox-container')) {
+			inboxContainer.addClass('cv-hide');
 		}
 	}
 

@@ -108,6 +108,17 @@
 			.cv-inbox-container {
 				position: absolute;
 
+				visibility: visible;
+				opacity: 1;
+				transition: visibility .5s, opacity .3s, transform .5s;
+				transform: translate(0, 0);
+
+				&.cv-hide {
+					visibility: hidden;
+					opacity: 0;
+					transform: translate(0, -20px);
+				}
+
 				.cv-inbox {
 					position: relative;
 					display: flex;

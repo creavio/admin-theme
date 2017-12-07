@@ -1,5 +1,6 @@
 @import "../mixins/color";
 
+$box-shadow-color: #545454;
 
 .cv-admin-theme {
 	.btn {
@@ -7,24 +8,29 @@
 		-webkit-font-smoothing: antialiased;
 		font-size: 13px;
 
-		transition: box-shadow .4s;
+		transition: box-shadow .2s;
 		border: 0;
+		cursor: pointer;
+		box-sizing: border-box !important;
 
 		&:focus, &:active, &:hover {
 			box-shadow: none;
 		}
 
 		&:active {
-			box-shadow: 3px 3px 10px #737373 !important;
+			box-shadow: 3px 3px 10px $box-shadow-color !important;
 		}
 
 		&:hover {
-			box-shadow: 0 0 5px #737373;
-
+			box-shadow: 0 0 5px $box-shadow-color;
 		}
 
 		&.btn-primary {
 			background-color: $navigation-active-background-color !important;
+
+			&:hover {
+				//background-color: darken($navigation-active-background-color, 5%) !important;
+			}
 		}
 	}
 }
