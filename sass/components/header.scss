@@ -110,31 +110,44 @@
 
 				.cv-inbox {
 					position: relative;
+					display: flex;
+					flex-direction: column;
+
 					background-color: #fff;
 					width: $header-inbox-width;
 					margin-left: $header-inbox-width / 2 * -1 + 28px;
 					margin-top: 12px;
 
-					border: 1px solid lighten($navigation-background-color, 20%);
-					border-top: 0;
+					border: 1px solid lighten($navigation-background-color, 50%);
 
 					box-shadow: 2px 2px 5px #737373;
 
-					height: 300px;
+					min-height: 300px;
 
-					//&:after {
-					//	content: '';
-					//	position: absolute;
-					//	top: 0;
-					//	left: 50%;
-					//	width: 0;
-					//	height: 0;
-					//	border: 8px solid transparent;
-					//	border-bottom-color: #f90;
-					//	border-top: 0;
-					//	margin-left: -8px;
-					//	margin-top: -8px;
-					//}
+					$inbox-darker-color: #ebebeb;
+
+					.cv-inbox-header, .cv-inbox-footer {
+						background-color: $inbox-darker-color;
+						padding: 5px;
+
+						height: 30px;
+					}
+
+					.cv-inbox-header {
+						font-weight: bold;
+						border-bottom: 1px solid darken($inbox-darker-color, 10%);
+					}
+
+					.cv-inbox-content {
+						flex: auto;
+					}
+
+					.cv-inbox-footer {
+						text-align: center;
+						margin: 0;
+						font-size: 13px;
+						border-top: 1px solid darken($inbox-darker-color, 10%);
+					}
 
 				}
 
