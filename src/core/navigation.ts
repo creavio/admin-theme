@@ -1,4 +1,4 @@
-import 'jquery';
+import $ from 'jquery';
 import * as _ from 'lodash';
 
 export class cvNavigation {

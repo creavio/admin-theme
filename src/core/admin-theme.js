@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var $ = require("jquery");
+var jquery_1 = require("jquery");
 var navigation_1 = require("./navigation");
 var header_1 = require("./header");
 var big_alert_1 = require("./big-alert");
@@ -15,10 +15,10 @@ var cvAdminTheme = (function () {
         this.removePreLoad();
     };
     cvAdminTheme.initTooltips = function () {
-        $('[data-toggle="tooltip"]').tooltip();
+        jquery_1.default('[data-toggle="tooltip"]').tooltip();
     };
     cvAdminTheme.removePreLoad = function () {
-        var body = $('body');
+        var body = jquery_1.default('body');
         if (body.hasClass('cv-preload')) {
             body.removeClass('cv-preload');
         }

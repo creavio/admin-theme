@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+import $ from 'jquery';
 import {cvNavigation} from "./navigation";
 import {cvHeader} from "./header";
 import {cvBigAlert} from "./big-alert";
